@@ -21,8 +21,8 @@ private:
 int main(void) {
 	int n;
 	cin >> n;
-	int zi[10];
-	int mu[10];
+	int*zi=new int[n+1];
+	int*mu=new int[n+1];
 	for (int i = 0; i < n; i++) {
 		char q;
 		cin >> zi[i] >> q >> mu[i];
@@ -46,6 +46,16 @@ int main(void) {
 	int g = add.jian(z, m);
 	z = z / g;
 	m = m / g;
-	cout << z << "/" << m;
+	if (m != 1 && z != 0) {
+		cout << z << "/" << m;
+	}
+	else if (m == 1 && z != 0) {
+		cout << z;
+	}
+	else {
+		cout << 0;
+	}
+	delete[]zi;
+	delete[]mu;
 	return 0;
 }
