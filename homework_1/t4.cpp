@@ -46,6 +46,14 @@ int main(void) {
 	int g = add.jian(z, m);
 	z = z / g;
 	m = m / g;
-	cout << z << "/" << m;
+	if(m!=1&&z!=0){
+	        cout << z << "/" << m;
+	}
+	else if(m==1&&z!=0){
+		cout<<z;
+	}
+	else{
+		cout<<0;
+	}
 	return 0;
 }
