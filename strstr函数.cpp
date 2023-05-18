@@ -2,15 +2,15 @@
 #include<iostream>
 #include<stdio.h>
 using namespace std;
-class strstr {
+class str {
 public:
-	strstr(char a[],char b[]);
+	str(char a[],char b[]);
 	void print();
 private:
 	int num;
 	int n;
 };
-strstr::strstr(char a[],char b[]) {
+str::str(char a[],char b[]) {
 	n = 0;
 	for (int i = 0; i < strlen(a)-strlen(b); i++) {
 		int f = 0;
@@ -26,7 +26,7 @@ strstr::strstr(char a[],char b[]) {
 
 	}
 }
-void strstr::print() {
+void str::print() {
 	if (n == 1)
 		printf("%d", num);
 	else
@@ -38,7 +38,7 @@ int main(void) {
 	char a[500], b[500];
 	scanf("%s", a);
 	scanf("%s", b);
-	strstr c(a, b);
+	str c(a, b);
 	c.print();
 	
 }
